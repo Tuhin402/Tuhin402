@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Tuhin
-- 👀 I’m interested in Web Development
-- 🌱 I’m currently learning Figma
+- 👀 I’m a web developer with expertise in fullstack
+- 🌱 Long to grow...
 
 
 <!---
