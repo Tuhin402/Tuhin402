@@ -15,6 +15,13 @@ class SVGDocument:
     - styles
     - reusable <defs>
     - SVG elements
+    - optional display sizing
+
+    The internal SVG geometry remains controlled
+    by width, height and viewBox.
+
+    display_width is optional and affects only
+    the intrinsic rendered size of the SVG.
     """
 
     def __init__(
@@ -23,6 +30,7 @@ class SVGDocument:
         height,
         background="none",
         responsive=True,
+        display_width=None,
     ):
 
         self.width = width
@@ -31,29 +39,59 @@ class SVGDocument:
         self.background = background
         self.responsive = responsive
 
+        # ------------------------------------------------
+        # Optional display dimensions
+        # ------------------------------------------------
+
+        self.display_width = display_width
+
+        self.display_height = None
+
+        if display_width is not None:
+
+            if width > 0:
+
+                self.display_height = (
+                    display_width
+                    * height
+                    / width
+                )
+
+        # ------------------------------------------------
+        # ViewBox
+        # ------------------------------------------------
+
         self.viewbox = (
             SVGViewBoxEngine()
-            .build(width, height)
+            .build(
+                width,
+                height,
+            )
         )
 
         self.styles = []
 
-        # NEW
         self.definitions = []
 
         self.elements = []
 
     # ------------------------------------------------
 
-    def add_style(self, style):
+    def add_style(
+        self,
+        style,
+    ):
 
-        self.styles.append(style)
+        self.styles.append(
+            style
+        )
 
     # ------------------------------------------------
-    # NEW
-    # ------------------------------------------------
 
-    def add_definition(self, definition):
+    def add_definition(
+        self,
+        definition,
+    ):
 
         """
         Adds anything that belongs
@@ -68,19 +106,69 @@ class SVGDocument:
         - filter
         """
 
-        self.definitions.append(definition)
+        self.definitions.append(
+            definition
+        )
 
     # ------------------------------------------------
 
-    def add(self, element: SVGElement):
+    def add(
+        self,
+        element: SVGElement,
+    ):
 
-        self.elements.append(element)
+        self.elements.append(
+            element
+        )
+
+    # ------------------------------------------------
+
+    def _render_dimensions(self):
+        """
+        Determines the SVG's external display
+        dimensions.
+
+        If display_width is not provided,
+        the existing responsive behavior is
+        preserved exactly.
+        """
+
+        # ------------------------------------------------
+        # Custom display size
+        # ------------------------------------------------
+
+        if self.display_width is not None:
+
+            width = str(
+                self.display_width
+            )
+
+            height = str(
+                self.display_height
+            )
+
+            return width, height
+
+        # ------------------------------------------------
+        # Existing responsive behavior
+        # ------------------------------------------------
+
+        if self.responsive:
+
+            return "100%", "100%"
+
+        return (
+            str(self.width),
+            str(self.height),
+        )
 
     # ------------------------------------------------
 
     def render(self):
 
-        logger.info("Rendering SVG Document")
+        logger.info(
+            "Rendering SVG Document"
+        )
 
         svg = []
 
@@ -88,15 +176,13 @@ class SVGDocument:
             '<?xml version="1.0" encoding="UTF-8"?>'
         )
 
-        if self.responsive:
+        # ------------------------------------------------
+        # Display dimensions
+        # ------------------------------------------------
 
-            width = "100%"
-            height = "100%"
-
-        else:
-
-            width = str(self.width)
-            height = str(self.height)
+        width, height = (
+            self._render_dimensions()
+        )
 
         svg.append(
 
@@ -105,14 +191,21 @@ class SVGDocument:
             f'width="{width}" '
             f'height="{height}" '
             f'viewBox="{self.viewbox.value}" '
-            f'preserveAspectRatio="{self.viewbox.preserve_aspect_ratio}">'
+            f'preserveAspectRatio='
+            f'"{self.viewbox.preserve_aspect_ratio}">'
+
         )
 
         # ------------------------------------------------
         # Background
         # ------------------------------------------------
 
-        if self.background not in (None, "", "none", "transparent"):
+        if self.background not in (
+            None,
+            "",
+            "none",
+            "transparent",
+        ):
 
             svg.append(
 
@@ -129,7 +222,9 @@ class SVGDocument:
 
         for style in self.styles:
 
-            svg.append(style)
+            svg.append(
+                style
+            )
 
         # ------------------------------------------------
         # Definitions
@@ -137,15 +232,21 @@ class SVGDocument:
 
         if self.definitions:
 
-            svg.append("<defs>")
+            svg.append(
+                "<defs>"
+            )
 
-            for definition in self.definitions:
+            for definition in (
+                self.definitions
+            ):
 
                 svg.append(
                     definition.render()
                 )
 
-            svg.append("</defs>")
+            svg.append(
+                "</defs>"
+            )
 
         # ------------------------------------------------
         # Components
@@ -153,19 +254,29 @@ class SVGDocument:
 
         for component in self.elements:
 
-            rendered = component.render()
+            rendered = (
+                component.render()
+            )
 
             # -----------------------------
             # list
             # -----------------------------
 
-            if isinstance(rendered, list):
+            if isinstance(
+                rendered,
+                list,
+            ):
 
                 for element in rendered:
 
-                    if isinstance(element, str):
+                    if isinstance(
+                        element,
+                        str,
+                    ):
 
-                        svg.append(element)
+                        svg.append(
+                            element
+                        )
 
                     else:
 
@@ -177,9 +288,14 @@ class SVGDocument:
             # raw string
             # -----------------------------
 
-            elif isinstance(rendered, str):
+            elif isinstance(
+                rendered,
+                str,
+            ):
 
-                svg.append(rendered)
+                svg.append(
+                    rendered
+                )
 
             # -----------------------------
             # SVGElement
@@ -191,15 +307,22 @@ class SVGDocument:
                     rendered.render()
                 )
 
-        svg.append("</svg>")
+        svg.append(
+            "</svg>"
+        )
 
         return "\n".join(svg)
 
     # ------------------------------------------------
 
-    def save(self, output):
+    def save(
+        self,
+        output,
+    ):
 
-        output = Path(output)
+        output = Path(
+            output
+        )
 
         output.write_text(
 

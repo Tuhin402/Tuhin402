@@ -1,6 +1,7 @@
 from config.settings import (
     GENERATED_SVG,
     JETBRAINS_MONO,
+    ASCII_DISPLAY_WIDTH,
 )
 
 from scripts.svg.document import SVGDocument
@@ -110,10 +111,12 @@ class SVGRenderer:
 
         current_time is maintained by the renderer,
         therefore every row begins exactly after
-        the previous row has finished.
+        the previous row has completely finished.
         """
 
-        return f"{current_time:.3f}s"
+        return (
+            f"{current_time:.3f}s"
+        )
 
     # ============================================================
     # Render
@@ -144,9 +147,24 @@ class SVGRenderer:
         # --------------------------------------------------------
 
         document = SVGDocument(
+
             width=info["width"],
+
             height=info["height"],
+
             background="transparent",
+
+            # ----------------------------------------------------
+            # IMPORTANT
+            #
+            # This changes only the external display size.
+            #
+            # The internal viewBox and all ASCII geometry
+            # remain untouched.
+            # ----------------------------------------------------
+
+            display_width=ASCII_DISPLAY_WIDTH,
+
         )
 
         # --------------------------------------------------------
@@ -187,12 +205,7 @@ class SVGRenderer:
         )
 
         # ========================================================
-        # IMPORTANT
-        #
-        # This is the cumulative timeline.
-        #
-        # It starts at zero and advances only after a row
-        # has completely finished.
+        # Cumulative animation timeline
         # ========================================================
 
         current_time = 0.0
@@ -233,9 +246,6 @@ class SVGRenderer:
 
             # ----------------------------------------------------
             # Find actual visible characters.
-            #
-            # This allows each row to have its own actual
-            # horizontal reveal range.
             # ----------------------------------------------------
 
             visible_positions = [
@@ -279,10 +289,6 @@ class SVGRenderer:
 
             # ----------------------------------------------------
             # Actual horizontal span.
-            #
-            # We preserve spaces between characters while
-            # removing unnecessary empty space before/after
-            # the visible content.
             # ----------------------------------------------------
 
             row_span = (
@@ -373,6 +379,7 @@ class SVGRenderer:
                 ),
 
                 begin=begin,
+
             )
 
             document.add_definition(
@@ -380,10 +387,7 @@ class SVGRenderer:
             )
 
             # ----------------------------------------------------
-            # Keep the original row text structure.
-            #
-            # We do NOT remove internal spaces because they
-            # are part of the ASCII portrait geometry.
+            # Keep original row structure.
             # ----------------------------------------------------
 
             block = SVGTextBlock(
@@ -422,6 +426,7 @@ class SVGRenderer:
                 letter_spacing=(
                     self.typography.letter_spacing
                 ),
+
             )
 
             # ----------------------------------------------------
@@ -444,8 +449,6 @@ class SVGRenderer:
 
             # ====================================================
             # Advance timeline.
-            #
-            # The NEXT row cannot begin until THIS row finishes.
             # ====================================================
 
             current_time += (

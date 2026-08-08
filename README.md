@@ -2,7 +2,11 @@
 
 ## Profile
 
-![](generated/svg/ascii.svg)
+<div align="center">
+
+<img src="generated/svg/ascii.svg" width="720" alt="ASCII profile portrait">
+
+</div>
 
 ## Statistics
 

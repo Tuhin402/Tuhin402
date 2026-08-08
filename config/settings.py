@@ -41,6 +41,12 @@ SAVE_DEBUG_IMAGES = True
 CROP_PADDING = 40
 
 # -------------------------------------------------
+# ASCII SVG DISPLAY SETTINGS
+# -------------------------------------------------
+
+ASCII_DISPLAY_WIDTH = 720
+
+# -------------------------------------------------
 # SVG SETTINGS
 # -------------------------------------------------
 
@@ -48,4 +54,7 @@ FONT_SIZE = 8
 
 LINE_HEIGHT = 1.20
 
-JETBRAINS_MONO = (FONT_DIRECTORY /"JetBrainsMono-Regular.ttf")
+JETBRAINS_MONO = (
+    FONT_DIRECTORY
+    / "JetBrainsMono-Regular.ttf"
+)

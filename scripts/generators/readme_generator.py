@@ -1,6 +1,9 @@
 from pathlib import Path
 
-from config.settings import ROOT
+from config.settings import (
+    ROOT,
+    ASCII_DISPLAY_WIDTH,
+)
 
 from scripts.generators.base import BaseGenerator
 
@@ -22,19 +25,31 @@ class ReadmeGenerator(BaseGenerator):
     def generate(self):
 
         logger.info("=" * 60)
-        logger.info("README GENERATOR")
+
+        logger.info(
+            "README GENERATOR"
+        )
+
         logger.info("=" * 60)
 
         content = self.build()
 
-        output = ROOT / "README.md"
-
-        output.write_text(
-            content,
-            encoding="utf-8",
+        output = (
+            ROOT
+            / "README.md"
         )
 
-        logger.info("README.md generated.")
+        output.write_text(
+
+            content,
+
+            encoding="utf-8",
+
+        )
+
+        logger.info(
+            "README.md generated."
+        )
 
     # --------------------------------------------------
 
@@ -42,32 +57,111 @@ class ReadmeGenerator(BaseGenerator):
 
         lines = []
 
-        lines.append("# GitHub Profile")
+        # ========================================================
+        # Header
+        # ========================================================
+
+        lines.append(
+            "# GitHub Profile"
+        )
+
         lines.append("")
 
-        lines.append("## Profile")
-        lines.append("")
-        lines.append("![](generated/svg/ascii.svg)")
+        # ========================================================
+        # Profile
+        # ========================================================
+
+        lines.append(
+            "## Profile"
+        )
+
         lines.append("")
 
-        lines.append("## Statistics")
-        lines.append("")
-        lines.append("![](generated/svg/stats.svg)")
+        lines.append(
+            '<div align="center">'
+        )
+
         lines.append("")
 
-        lines.append("## Languages")
-        lines.append("")
-        lines.append("![](generated/svg/languages.svg)")
+        lines.append(
+            f'<img '
+            f'src="generated/svg/ascii.svg" '
+            f'width="{ASCII_DISPLAY_WIDTH}" '
+            f'alt="ASCII profile portrait">'
+        )
+
         lines.append("")
 
-        lines.append("## Contribution Calendar")
-        lines.append("")
-        lines.append("![](generated/svg/year.svg)")
+        lines.append(
+            "</div>"
+        )
+
         lines.append("")
 
-        lines.append("## Contribution Streak")
-        lines.append("")
-        lines.append("![](generated/svg/streak.svg)")
+        # ========================================================
+        # Statistics
+        # ========================================================
+
+        lines.append(
+            "## Statistics"
+        )
+
         lines.append("")
 
-        return "\n".join(lines)
+        lines.append(
+            "![](generated/svg/stats.svg)"
+        )
+
+        lines.append("")
+
+        # ========================================================
+        # Languages
+        # ========================================================
+
+        lines.append(
+            "## Languages"
+        )
+
+        lines.append("")
+
+        lines.append(
+            "![](generated/svg/languages.svg)"
+        )
+
+        lines.append("")
+
+        # ========================================================
+        # Contribution Calendar
+        # ========================================================
+
+        lines.append(
+            "## Contribution Calendar"
+        )
+
+        lines.append("")
+
+        lines.append(
+            "![](generated/svg/year.svg)"
+        )
+
+        lines.append("")
+
+        # ========================================================
+        # Contribution Streak
+        # ========================================================
+
+        lines.append(
+            "## Contribution Streak"
+        )
+
+        lines.append("")
+
+        lines.append(
+            "![](generated/svg/streak.svg)"
+        )
+
+        lines.append("")
+
+        return "\n".join(
+            lines
+        )
