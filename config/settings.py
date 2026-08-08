@@ -44,7 +44,7 @@ CROP_PADDING = 40
 # ASCII SVG DISPLAY SETTINGS
 # -------------------------------------------------
 
-ASCII_DISPLAY_WIDTH = 720
+ASCII_DISPLAY_WIDTH = 520
 
 # -------------------------------------------------
 # SVG SETTINGS
