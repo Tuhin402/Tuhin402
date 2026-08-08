@@ -1,0 +1,284 @@
+from config.settings import GENERATED_SVG
+
+from scripts.generators.base import BaseGenerator
+from scripts.github.statistics import GitHubStatisticsEngine
+
+from scripts.svg.document import SVGDocument
+from scripts.svg.theme import DEFAULT_THEME
+
+from scripts.svg.components.container import ContainerComponent
+from scripts.svg.components.heading import HeadingComponent
+from scripts.svg.components.footer import FooterComponent
+from scripts.svg.components.statistic_card import StatisticCardComponent
+
+from scripts.svg.layouts.stats_layout import StatsLayout
+
+from scripts.utils.logger import logger
+
+
+class StatsGenerator(BaseGenerator):
+    """
+    Generates stats.svg.
+
+    Responsibilities:
+
+    - Load GitHub profile data
+    - Calculate statistics
+    - Build the responsive stats layout
+    - Create SVG components
+    - Control the animation timeline
+
+    Animation responsibility is intentionally kept here
+    at the document level.
+
+    StatisticCardComponent controls HOW a card animates.
+
+    StatsGenerator controls WHEN each card starts.
+    """
+
+    # ============================================================
+    # Configuration
+    # ============================================================
+
+    CARD_ANIMATION_STAGGER = 0.14
+
+    # ============================================================
+    # Initialization
+    # ============================================================
+
+    def __init__(self):
+
+        super().__init__()
+
+        self.statistics = GitHubStatisticsEngine()
+
+        self.layout = StatsLayout()
+
+        self.theme = DEFAULT_THEME
+
+    # ============================================================
+    # Generate
+    # ============================================================
+
+    def generate(self):
+
+        logger.info("=" * 60)
+
+        logger.info(
+            "STATS GENERATOR"
+        )
+
+        logger.info("=" * 60)
+
+        # --------------------------------------------------------
+        # Load GitHub data
+        # --------------------------------------------------------
+
+        profile = self.load_profile(
+            repositories=True,
+            contributions=True,
+        )
+
+        # --------------------------------------------------------
+        # Calculate statistics
+        # --------------------------------------------------------
+
+        stats = self.statistics.compute(
+            profile
+        )
+
+        # --------------------------------------------------------
+        # Render SVG
+        # --------------------------------------------------------
+
+        self.render_svg(
+            profile,
+            stats,
+        )
+
+    # ============================================================
+    # Animation timing
+    # ============================================================
+
+    def _card_animation_begin(
+        self,
+        index,
+    ):
+        """
+        Calculates the start time for a statistic card.
+
+        Cards are animated in document order:
+
+            Card 1
+                ↓
+            Card 2
+                ↓
+            Card 3
+                ↓
+            ...
+
+        The component itself remains responsible for
+        the internal card animation.
+        """
+
+        begin = (
+            index
+            * self.CARD_ANIMATION_STAGGER
+        )
+
+        return f"{begin:.3f}s"
+
+    # ============================================================
+    # Render SVG
+    # ============================================================
+
+    def render_svg(
+        self,
+        profile,
+        stats,
+    ):
+
+        logger.info(
+            "Rendering stats.svg"
+        )
+
+        # --------------------------------------------------------
+        # Build responsive layout
+        # --------------------------------------------------------
+
+        layout = self.layout.build(
+            stats
+        )
+
+        # --------------------------------------------------------
+        # Create SVG document
+        # --------------------------------------------------------
+
+        document = SVGDocument(
+
+            width=layout.width,
+
+            height=layout.height,
+
+            background=self.theme.page_background,
+
+        )
+
+        # ========================================================
+        # Main Container
+        # ========================================================
+
+        document.add(
+
+            ContainerComponent(
+
+                x=layout.container.x,
+
+                y=layout.container.y,
+
+                width=layout.container.width,
+
+                height=layout.container.height,
+
+            )
+
+        )
+
+        # ========================================================
+        # Heading
+        # ========================================================
+
+        document.add(
+
+            HeadingComponent(
+
+                title=(
+                    f"{profile.username}'s "
+                    f"GitHub Statistics"
+                ),
+
+                subtitle=(
+                    "Generated by Profile Generator"
+                ),
+
+                x=layout.heading.x,
+
+                y=layout.heading.y,
+
+            )
+
+        )
+
+        # ========================================================
+        # Statistic Cards
+        # ========================================================
+
+        for index, card in enumerate(
+            layout.cards
+        ):
+
+            animation_begin = (
+                self._card_animation_begin(
+                    index
+                )
+            )
+
+            document.add(
+
+                StatisticCardComponent(
+
+                    title=card.title,
+
+                    value=card.value,
+
+                    x=card.x,
+
+                    y=card.y,
+
+                    width=card.width,
+
+                    height=card.height,
+
+                    animation_begin=(
+                        animation_begin
+                    ),
+
+                )
+
+            )
+
+        # ========================================================
+        # Footer
+        # ========================================================
+
+        document.add(
+
+            FooterComponent(
+
+                text=(
+                    "Generated automatically "
+                    "using Profile Generator"
+                ),
+
+                x=layout.footer.x,
+
+                y=layout.footer.y,
+
+            )
+
+        )
+
+        # ========================================================
+        # Save
+        # ========================================================
+
+        document.save(
+
+            GENERATED_SVG
+            / "stats.svg"
+
+        )
+
+        logger.info(
+            "stats.svg generated."
+        )
