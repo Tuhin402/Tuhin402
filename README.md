@@ -2,7 +2,7 @@
 
 ## Profile
 
-![](generated/svg/profile.svg)
+![](generated/svg/ascii.svg)
 
 ## Statistics
 

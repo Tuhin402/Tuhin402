@@ -47,7 +47,7 @@ class ReadmeGenerator(BaseGenerator):
 
         lines.append("## Profile")
         lines.append("")
-        lines.append("![](generated/svg/profile.svg)")
+        lines.append("![](generated/svg/ascii.svg)")
         lines.append("")
 
         lines.append("## Statistics")
