@@ -12,6 +12,7 @@ from config.settings import (
 )
 
 from scripts.generators.base import BaseGenerator
+
 from scripts.svg.static_exporter import StaticSVGExporter
 
 from scripts.utils.logger import logger
@@ -21,10 +22,17 @@ class ReadmeGenerator(BaseGenerator):
     """
     Generates the final GitHub profile README.
 
-    The animated SVGs remain under generated/svg for local/browser
-    viewing. GitHub receives static final-state SVG copies under
-    generated/github because GitHub does not support inline SVG
-    animation or scripting.
+    The main ASCII portrait is referenced directly from:
+
+        generated/svg/ascii.svg
+
+    The remaining animated SVGs are exported as static
+    final-state copies under:
+
+        generated/github/
+
+    This keeps the README GitHub-compatible while preserving
+    the animated SVG source files for browser/local viewing.
     """
 
     def __init__(self):
@@ -42,14 +50,23 @@ class ReadmeGenerator(BaseGenerator):
     def generate(self):
 
         logger.info("=" * 60)
-        logger.info("README GENERATOR")
+
+        logger.info(
+            "README GENERATOR"
+        )
+
         logger.info("=" * 60)
 
         self._generate_github_assets()
 
+        self._remove_legacy_ascii_gif()
+
         content = self.build()
 
-        output = ROOT / "README.md"
+        output = (
+            ROOT
+            / "README.md"
+        )
 
         output.write_text(
             content,
@@ -66,7 +83,8 @@ class ReadmeGenerator(BaseGenerator):
 
     def _generate_github_assets(self):
         """
-        Freeze every animated SVG at its final visual state.
+        Freeze the non-hero animated SVG assets at
+        their final visual state for GitHub.
         """
 
         logger.info(
@@ -74,10 +92,54 @@ class ReadmeGenerator(BaseGenerator):
         )
 
         self.static_exporter.export_directory(
-            source_directory=GENERATED_SVG,
-            destination_directory=GENERATED_GITHUB,
-            filenames=README_ASSETS.keys(),
+
+            source_directory=(
+                GENERATED_SVG
+            ),
+
+            destination_directory=(
+                GENERATED_GITHUB
+            ),
+
+            filenames=(
+                README_ASSETS.keys()
+            ),
+
         )
+
+    # ============================================================
+    # Legacy GIF Cleanup
+    # ============================================================
+
+    def _remove_legacy_ascii_gif(self):
+        """
+        Removes the old ASCII GIF if it exists.
+
+        The project now uses ascii.svg directly.
+        """
+
+        legacy_gif = (
+            GENERATED_GITHUB
+            / "ascii.gif"
+        )
+
+        if not legacy_gif.exists():
+            return
+
+        try:
+
+            legacy_gif.unlink()
+
+            logger.info(
+                "Removed legacy ascii.gif."
+            )
+
+        except OSError as error:
+
+            logger.warning(
+                f"Could not remove legacy ascii.gif: "
+                f"{error}"
+            )
 
     # ============================================================
     # Skill Icons
@@ -88,18 +150,18 @@ class ReadmeGenerator(BaseGenerator):
         skill,
     ):
         """
-        Build an icon-only Simple Icons image.
-
-        The visible representation is only the vibrant icon.
+        Builds an icon-only technology item.
         """
 
         slug, color, label = skill
 
         return (
-            f'<a href="https://simpleicons.org/" '
+            f'<a '
+            f'href="https://simpleicons.org/" '
             f'title="{label}">'
             f'<img '
-            f'src="https://cdn.simpleicons.org/{slug}/{color}" '
+            f'src="https://cdn.simpleicons.org/'
+            f'{slug}/{color}" '
             f'alt="{label}" '
             f'width="42" '
             f'height="42">'
@@ -107,7 +169,7 @@ class ReadmeGenerator(BaseGenerator):
         )
 
     # ============================================================
-    # Image Helper
+    # Responsive Image Helper
     # ============================================================
 
     def _image(
@@ -116,17 +178,27 @@ class ReadmeGenerator(BaseGenerator):
         alt,
         width,
     ):
-        """Build a centered, responsive image block."""
+        """
+        Builds a centered responsive image block.
+        """
 
         return [
+
             '<p align="center">',
-            '',
-            f'<img '
-            f'src="generated/github/{filename}" '
-            f'alt="{alt}" '
-            f'width="{width}">',
-            '',
+
+            "",
+
+            (
+                f'<img '
+                f'src="generated/github/{filename}" '
+                f'alt="{alt}" '
+                f'width="{width}">'
+            ),
+
+            "",
+
             '</p>',
+
         ]
 
     # ============================================================
@@ -142,21 +214,44 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
+
             '<div align="center">',
-            '',
-            f'<img '
-            f'src="generated/github/ascii.gif" '
-            f'width="{ASCII_DISPLAY_WIDTH}" '
-            f'alt="Animated ASCII profile portrait">',
-            '',
+
+            "",
+
+            (
+                f'<img '
+                f'src="generated/svg/ascii.svg" '
+                f'width="{ASCII_DISPLAY_WIDTH}" '
+                f'alt="ASCII profile portrait">'
+            ),
+
+            "",
+
             f'<h1>{PROFILE_DISPLAY_NAME}</h1>',
-            '',
-            f'<p><strong>{PROFILE_ROLE}</strong></p>',
-            '',
-            f'<p>{PROFILE_BIO}</p>',
-            '',
+
+            "",
+
+            (
+                f'<p><strong>'
+                f'{PROFILE_ROLE}'
+                f'</strong></p>'
+            ),
+
+            "",
+
+            (
+                f'<p>'
+                f'{PROFILE_BIO}'
+                f'</p>'
+            ),
+
+            "",
+
             '</div>',
-            '',
+
+            "",
+
         ])
 
         # ========================================================
@@ -164,117 +259,212 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
+
             '## ⚡ Skill Arsenal',
-            '',
+
+            "",
+
             '<div align="center">',
-            '',
+
+            "",
+
         ])
 
         for skill in PROFILE_SKILLS:
 
             lines.append(
-                self._skill_icon(skill)
+                self._skill_icon(
+                    skill
+                )
             )
 
         lines.extend([
-            '',
+
+            "",
+
             '</div>',
-            '',
+
+            "",
+
             '<div align="center">',
-            '',
-            '<sub>⚔️ Building with a full-stack toolkit — one release at a time.</sub>',
-            '',
+
+            "",
+
+            (
+                '<sub>'
+                '⚔️ Building with a full-stack toolkit — '
+                'one release at a time.'
+                '</sub>'
+            ),
+
+            "",
+
             '</div>',
-            '',
+
+            "",
+
         ])
 
         # ========================================================
-        # GitHub pulse
+        # GitHub Arena
         # ========================================================
 
         lines.extend([
+
             '## 🎮 GitHub Arena',
-            '',
+
+            "",
+
         ])
 
         lines.extend(
+
             self._image(
+
                 filename="stats.svg",
+
                 alt="GitHub statistics",
-                width=README_IMAGE_WIDTHS["stats"],
+
+                width=(
+                    README_IMAGE_WIDTHS[
+                        "stats"
+                    ]
+                ),
+
             )
+
         )
 
-        lines.append('')
+        lines.append("")
 
         # ========================================================
-        # Languages
+        # Code DNA
         # ========================================================
 
         lines.extend([
+
             '## 🧬 Code DNA',
-            '',
+
+            "",
+
         ])
 
         lines.extend(
+
             self._image(
+
                 filename="languages.svg",
-                alt="Programming language distribution",
-                width=README_IMAGE_WIDTHS["languages"],
+
+                alt=(
+                    "Programming language "
+                    "distribution"
+                ),
+
+                width=(
+                    README_IMAGE_WIDTHS[
+                        "languages"
+                    ]
+                ),
+
             )
+
         )
 
-        lines.append('')
+        lines.append("")
 
         # ========================================================
-        # Contribution Calendar
+        # Activity Garden
         # ========================================================
 
         lines.extend([
+
             '## 🌱 Activity Garden',
-            '',
+
+            "",
+
         ])
 
         lines.extend(
+
             self._image(
+
                 filename="year.svg",
-                alt="GitHub contribution calendar",
-                width=README_IMAGE_WIDTHS["year"],
+
+                alt=(
+                    "GitHub contribution "
+                    "calendar"
+                ),
+
+                width=(
+                    README_IMAGE_WIDTHS[
+                        "year"
+                    ]
+                ),
+
             )
+
         )
 
-        lines.append('')
+        lines.append("")
 
         # ========================================================
         # Streak
         # ========================================================
 
         lines.extend([
+
             '## 🔥 Streak',
-            '',
+
+            "",
+
         ])
 
         lines.extend(
+
             self._image(
+
                 filename="streak.svg",
-                alt="GitHub contribution streak",
-                width=README_IMAGE_WIDTHS["streak"],
+
+                alt=(
+                    "GitHub contribution "
+                    "streak"
+                ),
+
+                width=(
+                    README_IMAGE_WIDTHS[
+                        "streak"
+                    ]
+                ),
+
             )
+
         )
 
-        lines.append('')
+        lines.append("")
 
         # ========================================================
         # Footer
         # ========================================================
 
         lines.extend([
+
             '<div align="center">',
-            '',
-            '<sub>Generated by a custom Python + SVG profile pipeline.</sub>',
-            '',
+
+            "",
+
+            (
+                '<sub>'
+                'Generated by a custom Python + SVG '
+                'profile pipeline.'
+                '</sub>'
+            ),
+
+            "",
+
             '</div>',
-            '',
+
+            "",
+
         ])
 
         return "\n".join(
