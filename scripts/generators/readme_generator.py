@@ -12,11 +12,8 @@ from config.settings import (
 )
 
 from scripts.generators.base import BaseGenerator
-
 from scripts.svg.static_exporter import StaticSVGExporter
-
 from scripts.utils.logger import logger
-
 
 class ReadmeGenerator(BaseGenerator):
     """

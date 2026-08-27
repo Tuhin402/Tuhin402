@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="generated/github/ascii.gif" width="520" alt="Animated ASCII profile portrait">
+<img src="generated/svg/ascii.svg" width="520" alt="ASCII profile portrait">
 
 <h1>Tuhin</h1>
 
