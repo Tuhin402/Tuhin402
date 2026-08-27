@@ -155,6 +155,8 @@ class LanguageBarComponent(SVGComponent):
 
         )
 
+        language_text.set_class("pg-language-label")
+
         language_text.set_opacity(0)
 
         language_text.animate(
@@ -203,6 +205,8 @@ class LanguageBarComponent(SVGComponent):
 
         )
 
+        percentage_text.set_class("pg-language-percentage")
+
         percentage_text.set_opacity(0)
 
         percentage_text.animate(
@@ -249,6 +253,8 @@ class LanguageBarComponent(SVGComponent):
             ry=6,
 
         )
+
+        track.set_class("pg-language-track")
 
         track.set_opacity(0)
 
@@ -318,6 +324,8 @@ class LanguageBarComponent(SVGComponent):
             ry=6,
 
         )
+
+        progress.set_class("pg-language-progress")
 
         progress.animate(
 

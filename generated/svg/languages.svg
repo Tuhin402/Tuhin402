@@ -1,48 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 908 718" preserveAspectRatio="xMidYMid meet">
 <rect width="100%" height="100%" fill="#0D1117" />
-<rect x="24" y="24" width="860" height="670" fill="#161B22" rx="16" ry="16" stroke="#30363D" stroke-width="1" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="56" fill="#FFFFFF" font-family="JetBrains Mono" font-size="16" font-weight="700" letter-spacing="1.5" xml:space="preserve" opacity="0.0">PROGRAMMING LANGUAGES<animate attributeName="opacity" from="0" to="1" dur="0.22s" begin="0.10s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="48" y="78" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">Repository language distribution<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="48" y="108" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">Jupyter Notebook<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="108" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">71.2%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.040s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="120" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.060s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="120" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="577.982" dur="0.32s" begin="0.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="160" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">TypeScript<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.120s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="160" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">10.6%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="172" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="172" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="85.828" dur="0.32s" begin="0.200s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="212" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">PHP<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.240s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="212" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">10.5%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.280s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="224" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.300s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="224" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="85.585" dur="0.32s" begin="0.320s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="264" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">CSS<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.360s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="264" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">3.7%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.400s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="276" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.420s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="276" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="30.369" dur="0.32s" begin="0.440s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="316" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">JavaScript<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.480s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="316" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">2.2%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.520s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="328" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.540s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="328" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="17.620" dur="0.32s" begin="0.560s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="368" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">Python<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.600s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="368" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">0.9%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.640s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="380" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.660s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="380" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="7.470" dur="0.32s" begin="0.680s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="420" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">HTML<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.720s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="420" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">0.5%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.760s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="432" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.780s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="432" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="4.222" dur="0.32s" begin="0.800s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="472" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">Blade<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.840s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="472" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">0.3%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.880s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="484" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.900s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="484" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="2.842" dur="0.32s" begin="0.920s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="524" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">Batchfile<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.960s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="524" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">0.0%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="536" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="1.020s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="536" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="0.162" dur="0.32s" begin="1.040s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="576" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">Procfile<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="818" y="576" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">0.0%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.120s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="588" width="812" height="14" fill="#30363D" rx="6" ry="6" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="1.140s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<rect x="48" y="588" width="0" height="14" fill="#58A6FF" rx="6" ry="6"><animate attributeName="width" from="0" to="0.000" dur="0.32s" begin="1.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="686" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">Generated automatically using Profile Generator<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.30s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+
+<style>
+
+@keyframes pgPulse {
+    0%, 100% { opacity: 0.82; }
+    50% { opacity: 1; }
+}
+
+@keyframes pgCardGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.035); }
+}
+
+.pg-container {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: filter 220ms ease, transform 220ms ease;
+}
+
+.pg-container:hover {
+    filter: brightness(1.06);
+}
+
+.pg-stat-card {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pgCardGlow 5s ease-in-out infinite;
+    transition: transform 220ms ease;
+}
+
+.pg-stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.pg-language-progress {
+    animation: pgPulse 3.2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: left center;
+    transition: filter 220ms ease;
+}
+
+.pg-language-progress:hover {
+    filter: brightness(1.16);
+}
+
+.pg-grid-cell {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 140ms ease, filter 140ms ease;
+}
+
+.pg-grid-cell:hover {
+    transform: scale(1.24);
+    filter: brightness(1.15);
+}
+
+.pg-grid-cell-hot {
+    animation: pgPulse 2.6s ease-in-out infinite;
+}
+
+</style>
+
+<rect x="24" y="24" width="860" height="670" fill="#161B22" rx="16" ry="16" stroke="#30363D" stroke-width="1" class="pg-container" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="56" fill="#FFFFFF" font-family="JetBrains Mono" font-size="16" font-weight="700" letter-spacing="1.5" xml:space="preserve" class="pg-heading-title" opacity="0.0">PROGRAMMING LANGUAGES<animate attributeName="opacity" from="0" to="1" dur="0.22s" begin="0.10s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="48" y="78" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-heading-subtitle" opacity="0.0">Repository language distribution<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="48" y="108" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">Jupyter Notebook<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="108" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">71.2%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.040s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="120" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.060s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="120" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="577.982" dur="0.32s" begin="0.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="160" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">TypeScript<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.120s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="160" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">10.6%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="172" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="172" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="85.828" dur="0.32s" begin="0.200s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="212" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">PHP<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.240s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="212" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">10.5%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.280s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="224" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.300s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="224" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="85.585" dur="0.32s" begin="0.320s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="264" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">CSS<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.360s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="264" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">3.7%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.400s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="276" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.420s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="276" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="30.369" dur="0.32s" begin="0.440s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="316" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">JavaScript<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.480s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="316" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">2.2%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.520s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="328" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.540s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="328" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="17.620" dur="0.32s" begin="0.560s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="368" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">Python<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.600s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="368" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">0.9%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.640s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="380" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.660s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="380" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="7.470" dur="0.32s" begin="0.680s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="420" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">HTML<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.720s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="420" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">0.5%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.760s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="432" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.780s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="432" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="4.222" dur="0.32s" begin="0.800s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="472" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">Blade<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.840s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="472" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">0.3%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.880s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="484" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="0.900s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="484" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="2.842" dur="0.32s" begin="0.920s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="524" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">Batchfile<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.960s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="524" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">0.0%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="536" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="1.020s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="536" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="0.162" dur="0.32s" begin="1.040s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="576" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="0.0">Procfile<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="818" y="576" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="0.0">0.0%<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.120s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="588" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.16s" begin="1.140s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<rect x="48" y="588" width="0" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress"><animate attributeName="width" from="0" to="0.000" dur="0.32s" begin="1.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="686" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-footer" opacity="0.0">Generated automatically using Profile Generator<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.30s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
 </svg>

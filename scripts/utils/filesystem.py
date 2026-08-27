@@ -5,6 +5,7 @@ from config.settings import (
     GENERATED_IMAGES,
     GENERATED_ASCII,
     GENERATED_SVG,
+    GENERATED_GITHUB,
     CACHE,
     LOGS,
 )
@@ -14,6 +15,7 @@ DIRECTORIES = [
     GENERATED_IMAGES,
     GENERATED_ASCII,
     GENERATED_SVG,
+    GENERATED_GITHUB,
     CACHE,
     LOGS,
 ]

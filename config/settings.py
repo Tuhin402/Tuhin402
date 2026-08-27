@@ -16,6 +16,8 @@ GENERATED_ASCII = GENERATED / "ascii"
 
 GENERATED_SVG = GENERATED / "svg"
 
+GENERATED_GITHUB = GENERATED / "github"
+
 CACHE = ROOT / "cache"
 
 LOGS = ROOT / "logs"
@@ -44,7 +46,50 @@ CROP_PADDING = 40
 # ASCII SVG DISPLAY SETTINGS
 # -------------------------------------------------
 
-ASCII_DISPLAY_WIDTH = 260
+# The ASCII artwork keeps its internal aspect ratio.
+# This controls only its rendered display width.
+ASCII_DISPLAY_WIDTH = 520
+
+# -------------------------------------------------
+# PROFILE / README SETTINGS
+# -------------------------------------------------
+
+PROFILE_DISPLAY_NAME = "Tuhin"
+
+PROFILE_ROLE = "Full Stack Web Developer"
+
+PROFILE_BIO = (
+    "Building polished web experiences, developer tooling, "
+    "and practical systems with a focus on clean architecture "
+    "and thoughtful UI."
+)
+
+PROFILE_SKILLS = (
+    "PHP",
+    "Laravel",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "CSS",
+    "GSAP",
+    "MySQL",
+)
+
+README_IMAGE_WIDTHS = {
+    "ascii": ASCII_DISPLAY_WIDTH,
+    "stats": 860,
+    "languages": 860,
+    "year": 900,
+    "streak": 736,
+}
+
+README_ASSETS = {
+    "ascii.svg": "ascii.svg",
+    "stats.svg": "stats.svg",
+    "languages.svg": "languages.svg",
+    "year.svg": "year.svg",
+    "streak.svg": "streak.svg",
+}
 
 # -------------------------------------------------
 # SVG SETTINGS

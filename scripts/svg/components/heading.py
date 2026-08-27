@@ -17,13 +17,9 @@ class HeadingComponent(SVGComponent):
         - title only
         - title + subtitle
 
-    Animation responsibility:
-
-        title    -> first
-        subtitle -> shortly after
-
-    Geometry remains controlled entirely by
-    the layout engine.
+    The generator controls when the heading begins;
+    this component controls the internal title/subtitle
+    choreography.
     """
 
     TITLE_SIZE = 16
@@ -31,10 +27,6 @@ class HeadingComponent(SVGComponent):
 
     TITLE_SPACING = 22
     SUBTITLE_SPACING = 18
-
-    # --------------------------------------------------------
-    # Animation
-    # --------------------------------------------------------
 
     TITLE_ANIMATION_DURATION = "0.22s"
     SUBTITLE_ANIMATION_DURATION = "0.18s"
@@ -57,10 +49,6 @@ class HeadingComponent(SVGComponent):
 
         super().__init__()
 
-        # ----------------------------------------------------
-        # Backward compatibility
-        # ----------------------------------------------------
-
         if title is None:
             title = text
 
@@ -70,16 +58,8 @@ class HeadingComponent(SVGComponent):
 
         self.subtitle = subtitle
 
-        # ----------------------------------------------------
-        # Position
-        # ----------------------------------------------------
-
         self.x = x
         self.y = y
-
-        # ----------------------------------------------------
-        # Theme / Typography
-        # ----------------------------------------------------
 
         self.typography = (
             typography
@@ -90,10 +70,6 @@ class HeadingComponent(SVGComponent):
             theme
             or DEFAULT_THEME
         )
-
-        # ----------------------------------------------------
-        # Animation timing
-        # ----------------------------------------------------
 
         self.animation_begin = (
             animation_begin
@@ -121,13 +97,6 @@ class HeadingComponent(SVGComponent):
     # ========================================================
 
     def _subtitle_begin(self):
-        """
-        Calculates the subtitle start time
-        relative to the heading start.
-
-        The subtitle follows the title rather
-        than appearing simultaneously.
-        """
 
         try:
 
@@ -163,13 +132,10 @@ class HeadingComponent(SVGComponent):
         # Main Title
         # ====================================================
 
-        title_y = self.y
-
         title = SVGText(
 
             x=self.x,
-
-            y=title_y,
+            y=self.y,
 
             value=self.title,
 
@@ -187,15 +153,11 @@ class HeadingComponent(SVGComponent):
 
         )
 
-        # ----------------------------------------------------
-        # Prevent flash before SMIL begins
-        # ----------------------------------------------------
+        title.set_class(
+            "pg-heading-title"
+        )
 
         title.set_opacity(0)
-
-        # ----------------------------------------------------
-        # Title entrance
-        # ----------------------------------------------------
 
         title.animate(
 
@@ -203,9 +165,7 @@ class HeadingComponent(SVGComponent):
 
                 begin=self.animation_begin,
 
-                duration=(
-                    self.TITLE_ANIMATION_DURATION
-                ),
+                duration=self.TITLE_ANIMATION_DURATION,
 
                 easing=Easings.EASE_OUT,
 
@@ -221,16 +181,14 @@ class HeadingComponent(SVGComponent):
 
         if self.subtitle:
 
-            subtitle_y = (
-                title_y
-                + self.TITLE_SPACING
-            )
-
             subtitle = SVGText(
 
                 x=self.x,
 
-                y=subtitle_y,
+                y=(
+                    self.y
+                    + self.TITLE_SPACING
+                ),
 
                 value=self.subtitle,
 
@@ -248,15 +206,11 @@ class HeadingComponent(SVGComponent):
 
             )
 
-            # ------------------------------------------------
-            # Prevent flash before animation
-            # ------------------------------------------------
+            subtitle.set_class(
+                "pg-heading-subtitle"
+            )
 
             subtitle.set_opacity(0)
-
-            # ------------------------------------------------
-            # Subtitle entrance
-            # ------------------------------------------------
 
             subtitle.animate(
 
@@ -264,9 +218,7 @@ class HeadingComponent(SVGComponent):
 
                     begin=self._subtitle_begin(),
 
-                    duration=(
-                        self.SUBTITLE_ANIMATION_DURATION
-                    ),
+                    duration=self.SUBTITLE_ANIMATION_DURATION,
 
                     easing=Easings.EASE_OUT,
 
@@ -274,8 +226,6 @@ class HeadingComponent(SVGComponent):
 
             )
 
-            elements.append(
-                subtitle
-            )
+            elements.append(subtitle)
 
         return elements

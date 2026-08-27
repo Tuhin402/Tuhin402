@@ -194,6 +194,8 @@ class StatisticCardComponent(SVGComponent):
 
         )
 
+        background.set_class("pg-stat-card")
+
         # -------------------------------------------------
         # Initially hidden.
         #
@@ -249,6 +251,8 @@ class StatisticCardComponent(SVGComponent):
 
         )
 
+        title.set_class("pg-stat-title")
+
         # -------------------------------------------------
         # Title starts shortly after the card begins.
         # -------------------------------------------------
@@ -296,6 +300,8 @@ class StatisticCardComponent(SVGComponent):
             font_weight="700",
 
         )
+
+        value.set_class("pg-stat-value")
 
         # -------------------------------------------------
         # Value appears slightly after the title.

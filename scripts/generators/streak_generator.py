@@ -73,6 +73,7 @@ class StreakGenerator(BaseGenerator):
         # --------------------------------------------------------
 
         profile = self.load_profile(
+            repositories=True,
             contributions=True,
         )
 

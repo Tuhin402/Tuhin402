@@ -84,10 +84,10 @@ class ContainerComponent(SVGComponent):
     Draws the rounded background panel
     used by generated SVG documents.
 
-    The component remains fully responsive because
-    its geometry is supplied by the layout engine.
+    Geometry is supplied by the layout engine.
 
-    Animation is limited to visual entrance behavior.
+    The entrance animation is intentionally subtle
+    and remains compatible with the shared SVG system.
     """
 
     DEFAULT_FILL = "#161B22"
@@ -140,10 +140,6 @@ class ContainerComponent(SVGComponent):
 
     def render(self):
 
-        # --------------------------------------------------------
-        # Background panel
-        # --------------------------------------------------------
-
         element = SVGRect(
 
             x=self.x,
@@ -162,19 +158,11 @@ class ContainerComponent(SVGComponent):
 
         )
 
-        # --------------------------------------------------------
-        # Start invisible.
-        #
-        # This is important because SMIL animation must not
-        # briefly display the completed container before
-        # animation begins.
-        # --------------------------------------------------------
+        element.set_class(
+            "pg-container"
+        )
 
         element.set_opacity(0)
-
-        # --------------------------------------------------------
-        # Subtle entrance
-        # --------------------------------------------------------
 
         element.animate(
 

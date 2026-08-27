@@ -1,20 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 736 358" preserveAspectRatio="xMidYMid meet">
 <rect width="100%" height="100%" fill="#0D1117" />
-<rect x="24" y="24" width="688" height="310" fill="#161B22" rx="16" ry="16" stroke="#30363D" stroke-width="1" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="48" y="56" fill="#FFFFFF" font-family="JetBrains Mono" font-size="16" font-weight="700" letter-spacing="1.5" xml:space="preserve" opacity="0.0">TUHIN402'S CONTRIBUTION STREAK<animate attributeName="opacity" from="0" to="1" dur="0.22s" begin="0.10s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="48" y="78" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">Current and longest contribution streak<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="48" y="120" width="300" height="150" fill="#111111" rx="12" ry="12" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.26s" begin="0.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+
+<style>
+
+@keyframes pgPulse {
+    0%, 100% { opacity: 0.82; }
+    50% { opacity: 1; }
+}
+
+@keyframes pgCardGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.035); }
+}
+
+.pg-container {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: filter 220ms ease, transform 220ms ease;
+}
+
+.pg-container:hover {
+    filter: brightness(1.06);
+}
+
+.pg-stat-card {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pgCardGlow 5s ease-in-out infinite;
+    transition: transform 220ms ease;
+}
+
+.pg-stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.pg-language-progress {
+    animation: pgPulse 3.2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: left center;
+    transition: filter 220ms ease;
+}
+
+.pg-language-progress:hover {
+    filter: brightness(1.16);
+}
+
+.pg-grid-cell {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 140ms ease, filter 140ms ease;
+}
+
+.pg-grid-cell:hover {
+    transform: scale(1.24);
+    filter: brightness(1.15);
+}
+
+.pg-grid-cell-hot {
+    animation: pgPulse 2.6s ease-in-out infinite;
+}
+
+</style>
+
+<rect x="24" y="24" width="688" height="310" fill="#161B22" rx="16" ry="16" stroke="#30363D" stroke-width="1" class="pg-container" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
+<text x="48" y="56" fill="#FFFFFF" font-family="JetBrains Mono" font-size="16" font-weight="700" letter-spacing="1.5" xml:space="preserve" class="pg-heading-title" opacity="0.0">TUHIN402'S CONTRIBUTION STREAK<animate attributeName="opacity" from="0" to="1" dur="0.22s" begin="0.10s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="48" y="78" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-heading-subtitle" opacity="0.0">Current and longest contribution streak<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="0.180s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<rect x="48" y="120" width="300" height="150" fill="#111111" rx="12" ry="12" class="pg-stat-card" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.26s" begin="0.000s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 7" to="0 0" dur="0.30s" begin="0.000s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="64" y="144" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">CURRENT STREAK<animate attributeName="opacity" from="0" to="1" dur="0.20s" begin="0.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+<text x="64" y="144" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-stat-title" opacity="0.0">CURRENT STREAK<animate attributeName="opacity" from="0" to="1" dur="0.20s" begin="0.080s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 3" to="0 0" dur="0.22s" begin="0.080s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="64" y="180" fill="#FFFFFF" font-family="JetBrains Mono" font-size="28" font-weight="700" letter-spacing="0" xml:space="preserve" opacity="0.0">0<animate attributeName="opacity" from="0" to="1" dur="0.24s" begin="0.150s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+<text x="64" y="180" fill="#FFFFFF" font-family="JetBrains Mono" font-size="28" font-weight="700" letter-spacing="0" xml:space="preserve" class="pg-stat-value" opacity="0.0">0<animate attributeName="opacity" from="0" to="1" dur="0.24s" begin="0.150s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 4" to="0 0" dur="0.26s" begin="0.150s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<rect x="388" y="120" width="300" height="150" fill="#111111" rx="12" ry="12" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.26s" begin="0.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+<rect x="388" y="120" width="300" height="150" fill="#111111" rx="12" ry="12" class="pg-stat-card" opacity="0.0"><animate attributeName="opacity" from="0" to="1" dur="0.26s" begin="0.160s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 7" to="0 0" dur="0.30s" begin="0.160s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></rect>
-<text x="404" y="144" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="600" letter-spacing="0" xml:space="preserve" opacity="0.0">LONGEST STREAK<animate attributeName="opacity" from="0" to="1" dur="0.20s" begin="0.240s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+<text x="404" y="144" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-stat-title" opacity="0.0">LONGEST STREAK<animate attributeName="opacity" from="0" to="1" dur="0.20s" begin="0.240s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 3" to="0 0" dur="0.22s" begin="0.240s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="404" y="180" fill="#FFFFFF" font-family="JetBrains Mono" font-size="28" font-weight="700" letter-spacing="0" xml:space="preserve" opacity="0.0">10<animate attributeName="opacity" from="0" to="1" dur="0.24s" begin="0.310s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
+<text x="404" y="180" fill="#FFFFFF" font-family="JetBrains Mono" font-size="28" font-weight="700" letter-spacing="0" xml:space="preserve" class="pg-stat-value" opacity="0.0">10<animate attributeName="opacity" from="0" to="1" dur="0.24s" begin="0.310s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" />
 <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 4" to="0 0" dur="0.26s" begin="0.310s" fill="freeze" additive="sum" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
-<text x="48" y="326" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" opacity="0.0">Generated automatically using Profile Generator<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.30s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
+<text x="48" y="326" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-footer" opacity="0.0">Generated automatically using Profile Generator<animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="1.30s" fill="freeze" repeatCount="1" calcMode="spline" keySplines="0 0 0.58 1" keyTimes="0;1" /></text>
 </svg>

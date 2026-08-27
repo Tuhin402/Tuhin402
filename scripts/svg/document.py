@@ -71,6 +71,8 @@ class SVGDocument:
 
         self.styles = []
 
+        self.add_default_motion_styles()
+
         self.definitions = []
 
         self.elements = []
@@ -85,6 +87,77 @@ class SVGDocument:
         self.styles.append(
             style
         )
+
+    # ------------------------------------------------
+
+    def add_default_motion_styles(self):
+        """Add reusable local-browser motion and hover styles."""
+
+        self.styles.append(
+            """
+<style>
+
+@keyframes pgPulse {
+    0%, 100% { opacity: 0.82; }
+    50% { opacity: 1; }
+}
+
+@keyframes pgCardGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.035); }
+}
+
+.pg-container {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: filter 220ms ease, transform 220ms ease;
+}
+
+.pg-container:hover {
+    filter: brightness(1.06);
+}
+
+.pg-stat-card {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pgCardGlow 5s ease-in-out infinite;
+    transition: transform 220ms ease;
+}
+
+.pg-stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.pg-language-progress {
+    animation: pgPulse 3.2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: left center;
+    transition: filter 220ms ease;
+}
+
+.pg-language-progress:hover {
+    filter: brightness(1.16);
+}
+
+.pg-grid-cell {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 140ms ease, filter 140ms ease;
+}
+
+.pg-grid-cell:hover {
+    transform: scale(1.24);
+    filter: brightness(1.15);
+}
+
+.pg-grid-cell-hot {
+    animation: pgPulse 2.6s ease-in-out infinite;
+}
+
+</style>
+"""
+        )
+        return self
 
     # ------------------------------------------------
 

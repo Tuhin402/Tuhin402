@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Generator Preview</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 32px 16px 64px;
+            background: #0D1117;
+            color: #FFFFFF;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        main {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin: 0 auto 28px;
+        }
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 5vw, 48px);
+            letter-spacing: -0.04em;
+        }
+        header p {
+            margin: 0;
+            color: #8B949E;
+        }
+        .panel {
+            margin: 18px 0;
+            padding: clamp(10px, 2vw, 20px);
+            background: #0D1117;
+            border: 1px solid #30363D;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+        }
+        .panel:hover {
+            transform: translateY(-2px);
+            border-color: #58A6FF;
+            box-shadow: 0 12px 40px rgba(0,0,0,.20);
+        }
+        object {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+        .profile object {
+            width: min(520px, 100%);
+            margin: 0 auto;
+        }
+        .note {
+            text-align: center;
+            color: #8B949E;
+            margin-top: 28px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Profile Generator</h1>
+        <p>Animated browser preview of the generated profile assets.</p>
+    </header>
+
+    <section class="panel profile">
+        <object data="generated/svg/ascii.svg" type="image/svg+xml" aria-label="Animated ASCII profile portrait"></object>
+    </section>
+
+    <section class="panel">
+        <object data="generated/svg/stats.svg" type="image/svg+xml" aria-label="Animated GitHub statistics"></object>
+    </section>
+
+    <section class="panel">
+        <object data="generated/svg/languages.svg" type="image/svg+xml" aria-label="Animated programming languages"></object>
+    </section>
+
+    <section class="panel">
+        <object data="generated/svg/year.svg" type="image/svg+xml" aria-label="Animated contribution calendar"></object>
+    </section>
+
+    <section class="panel">
+        <object data="generated/svg/streak.svg" type="image/svg+xml" aria-label="Animated contribution streak"></object>
+    </section>
+
+    <p class="note">Open the generated SVGs directly or use this preview to experience the local motion and hover effects.</p>
+</main>
+</body>
+</html>

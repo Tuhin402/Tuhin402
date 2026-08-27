@@ -1,6 +1,7 @@
 from scripts.svg.components.base import SVGComponent
 
 from scripts.svg.elements import SVGText
+
 from scripts.svg.typography import Typography
 from scripts.svg.theme import DEFAULT_THEME
 
@@ -12,10 +13,8 @@ class FooterComponent(SVGComponent):
     """
     Renders a reusable footer.
 
-    The footer uses a subtle opacity entrance.
-
-    Geometry and positioning remain controlled
-    by the layout engine.
+    The footer remains intentionally quiet so it does not
+    compete with the primary data visualizations.
     """
 
     FONT_SIZE = 12
@@ -62,7 +61,6 @@ class FooterComponent(SVGComponent):
         element = SVGText(
 
             x=self.x,
-
             y=self.y,
 
             value=self.text,
@@ -79,15 +77,11 @@ class FooterComponent(SVGComponent):
 
         )
 
-        # ----------------------------------------------------
-        # Prevent initial flash.
-        # ----------------------------------------------------
+        element.set_class(
+            "pg-footer"
+        )
 
         element.set_opacity(0)
-
-        # ----------------------------------------------------
-        # Footer entrance.
-        # ----------------------------------------------------
 
         element.animate(
 

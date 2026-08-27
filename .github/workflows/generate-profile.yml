@@ -2,6 +2,8 @@ name: Generate GitHub Profile
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 0 * * *"
 
 jobs:
   generate:
@@ -26,7 +28,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       # -----------------------------------------------
       # Install dependencies

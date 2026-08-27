@@ -236,6 +236,13 @@ class ContributionGridComponent(SVGComponent):
 
             )
 
+            if level >= 3:
+                element.set_class(
+                    "pg-grid-cell pg-grid-cell-hot"
+                )
+            else:
+                element.set_class("pg-grid-cell")
+
             # ----------------------------------------------------
             # Start invisible
             # ----------------------------------------------------
