@@ -9,6 +9,7 @@ from scripts.ascii.dithering import FloydSteinbergDither
 from scripts.ascii.matrix import ASCIIMatrix
 from scripts.ascii.pixels import PixelMatrix
 from scripts.ascii.renderer import ASCIIRenderer
+from scripts.ascii.gif import ASCIIAnimatedGIFExporter
 from scripts.ascii.resolution import ASCIIResolution
 
 from scripts.svg.renderer import SVGRenderer
@@ -30,6 +31,7 @@ class ProfileGenerator(BaseGenerator):
         self.dither = FloydSteinbergDither()
         self.ascii_matrix = ASCIIMatrix()
         self.preview = ASCIIRenderer()
+        self.gif = ASCIIAnimatedGIFExporter()
         self.svg = SVGRenderer()
 
     # --------------------------------------------------
@@ -51,5 +53,6 @@ class ProfileGenerator(BaseGenerator):
 
         self.preview.render(matrix)
         self.svg.render(matrix)
+        self.gif.export(matrix)
 
         logger.info("Profile generation complete.")

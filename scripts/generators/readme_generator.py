@@ -80,39 +80,30 @@ class ReadmeGenerator(BaseGenerator):
         )
 
     # ============================================================
-    # Badge Helpers
+    # Skill Icons
     # ============================================================
 
-    def _skill_badge(
+    def _skill_icon(
         self,
         skill,
     ):
         """
-        Build a compact Shields.io skill badge.
+        Build an icon-only Simple Icons image.
+
+        The visible representation is only the vibrant icon.
         """
 
-        encoded_name = (
-            skill
-            .replace(" ", "%20")
-            .replace("/", "%2F")
-        )
-
-        logo = (
-            skill
-            .lower()
-            .replace(".", "")
-            .replace(" ", "")
-        )
+        slug, color, label = skill
 
         return (
+            f'<a href="https://simpleicons.org/" '
+            f'title="{label}">'
             f'<img '
-            f'src="https://img.shields.io/badge/'
-            f'{encoded_name}-161B22'
-            f'?style=for-the-badge'
-            f'&logo={logo}'
-            f'&logoColor=white" '
-            f'alt="{skill}" '
-            f'height="28">'
+            f'src="https://cdn.simpleicons.org/{slug}/{color}" '
+            f'alt="{label}" '
+            f'width="42" '
+            f'height="42">'
+            f'</a>'
         )
 
     # ============================================================
@@ -154,9 +145,9 @@ class ReadmeGenerator(BaseGenerator):
             '<div align="center">',
             '',
             f'<img '
-            f'src="generated/github/ascii.svg" '
+            f'src="generated/github/ascii.gif" '
             f'width="{ASCII_DISPLAY_WIDTH}" '
-            f'alt="ASCII profile portrait">',
+            f'alt="Animated ASCII profile portrait">',
             '',
             f'<h1>{PROFILE_DISPLAY_NAME}</h1>',
             '',
@@ -173,7 +164,7 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
-            '## ⚡ Skills & Stack',
+            '## ⚡ Skill Arsenal',
             '',
             '<div align="center">',
             '',
@@ -182,10 +173,16 @@ class ReadmeGenerator(BaseGenerator):
         for skill in PROFILE_SKILLS:
 
             lines.append(
-                self._skill_badge(skill)
+                self._skill_icon(skill)
             )
 
         lines.extend([
+            '',
+            '</div>',
+            '',
+            '<div align="center">',
+            '',
+            '<sub>⚔️ Building with a full-stack toolkit — one release at a time.</sub>',
             '',
             '</div>',
             '',
@@ -196,7 +193,7 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
-            '## GitHub Pulse',
+            '## 🎮 GitHub Arena',
             '',
         ])
 
@@ -215,7 +212,7 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
-            '## Languages',
+            '## 🧬 Code DNA',
             '',
         ])
 
@@ -234,7 +231,7 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
-            '## Contribution Calendar',
+            '## 🌱 Activity Garden',
             '',
         ])
 
@@ -253,7 +250,7 @@ class ReadmeGenerator(BaseGenerator):
         # ========================================================
 
         lines.extend([
-            '## Contribution Streak',
+            '## 🔥 Streak',
             '',
         ])
 

@@ -175,6 +175,32 @@ class SVGRenderer:
             self.font.generate_style()
         )
 
+        document.add_style(
+            """
+            @keyframes pgAsciiBreath {
+                0%, 100% {
+                    opacity: 0.94;
+                    filter: brightness(1);
+                }
+                50% {
+                    opacity: 1;
+                    filter: brightness(1.04);
+                }
+            }
+
+            .pg-ascii-row {
+                animation: pgAsciiBreath 6s ease-in-out infinite;
+                transition: filter 180ms ease, transform 180ms ease;
+                transform-box: fill-box;
+                transform-origin: center;
+            }
+
+            .pg-ascii-row:hover {
+                filter: brightness(1.12);
+            }
+            """
+        )
+
         # --------------------------------------------------------
         # Typography metrics
         # --------------------------------------------------------
@@ -432,6 +458,10 @@ class SVGRenderer:
             # ----------------------------------------------------
             # Attach mask
             # ----------------------------------------------------
+
+            block.set_class(
+                "pg-ascii-row"
+            )
 
             block.set_mask(
                 mask_id

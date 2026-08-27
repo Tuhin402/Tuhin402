@@ -46,8 +46,8 @@ CROP_PADDING = 40
 # ASCII SVG DISPLAY SETTINGS
 # -------------------------------------------------
 
-# The ASCII artwork keeps its internal aspect ratio.
-# This controls only its rendered display width.
+# Controls only the rendered width of the ASCII
+# portrait. Internal ASCII geometry is unchanged.
 ASCII_DISPLAY_WIDTH = 520
 
 # -------------------------------------------------
@@ -64,19 +64,24 @@ PROFILE_BIO = (
     "and thoughtful UI."
 )
 
+# Icon-only skill stack used by the generated README.
+# slug is the Simple Icons CDN slug and color is the icon brand color.
 PROFILE_SKILLS = (
-    "PHP",
-    "Laravel",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "CSS",
-    "GSAP",
-    "MySQL",
+    ("php", "777BB4", "PHP"),
+    ("laravel", "FF2D20", "Laravel"),
+    ("javascript", "F7DF1E", "JavaScript"),
+    ("react", "61DAFB", "React"),
+    ("nodedotjs", "339933", "Node.js"),
+    ("nextdotjs", "FFFFFF", "Next.js"),
+    ("python", "3776AB", "Python"),
+    ("tailwindcss", "06B6D4", "Tailwind CSS"),
+    ("bootstrap", "7952B3", "Bootstrap"),
+    ("postgresql", "4169E1", "PostgreSQL"),
+    ("mysql", "4479A1", "MySQL"),
+    ("greensock", "88CE02", "GSAP"),
 )
 
 README_IMAGE_WIDTHS = {
-    "ascii": ASCII_DISPLAY_WIDTH,
     "stats": 860,
     "languages": 860,
     "year": 900,
@@ -84,7 +89,6 @@ README_IMAGE_WIDTHS = {
 }
 
 README_ASSETS = {
-    "ascii.svg": "ascii.svg",
     "stats.svg": "stats.svg",
     "languages.svg": "languages.svg",
     "year.svg": "year.svg",
@@ -103,3 +107,16 @@ JETBRAINS_MONO = (
     FONT_DIRECTORY
     / "JetBrainsMono-Regular.ttf"
 )
+
+ASCII_RAMP_STANDARD = (
+    "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/"
+    "|()1{}[]?-_+~<>i!lI;:,\"^`'. "
+)
+
+ASCII_RAMP_SIMPLE = "@%#*+=-:. "
+
+DEFAULT_BACKGROUND = "#000000"
+
+DEFAULT_FOREGROUND = "#FFFFFF"
+
+DEFAULT_FONT = "JetBrains Mono"

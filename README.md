@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="generated/github/ascii.svg" width="520" alt="ASCII profile portrait">
+<img src="generated/github/ascii.gif" width="520" alt="Animated ASCII profile portrait">
 
 <h1>Tuhin</h1>
 
@@ -10,22 +10,32 @@
 
 </div>
 
-## ⚡ Skills & Stack
+## ⚡ Skill Arsenal
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/PHP-161B22?style=for-the-badge&logo=php&logoColor=white" alt="PHP" height="28">
-<img src="https://img.shields.io/badge/Laravel-161B22?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" height="28">
-<img src="https://img.shields.io/badge/JavaScript-161B22?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript" height="28">
-<img src="https://img.shields.io/badge/React-161B22?style=for-the-badge&logo=react&logoColor=white" alt="React" height="28">
-<img src="https://img.shields.io/badge/Node.js-161B22?style=for-the-badge&logo=nodejs&logoColor=white" alt="Node.js" height="28">
-<img src="https://img.shields.io/badge/CSS-161B22?style=for-the-badge&logo=css&logoColor=white" alt="CSS" height="28">
-<img src="https://img.shields.io/badge/GSAP-161B22?style=for-the-badge&logo=gsap&logoColor=white" alt="GSAP" height="28">
-<img src="https://img.shields.io/badge/MySQL-161B22?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" height="28">
+<a href="https://simpleicons.org/" title="PHP"><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Laravel"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="React"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Node.js"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Next.js"><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Tailwind CSS"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="Bootstrap"><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="PostgreSQL"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="MySQL"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" width="42" height="42"></a>
+<a href="https://simpleicons.org/" title="GSAP"><img src="https://cdn.simpleicons.org/greensock/88CE02" alt="GSAP" width="42" height="42"></a>
 
 </div>
 
-## GitHub Pulse
+<div align="center">
+
+<sub>⚔️ Building with a full-stack toolkit — one release at a time.</sub>
+
+</div>
+
+## 🎮 GitHub Arena
 
 <p align="center">
 
@@ -33,7 +43,7 @@
 
 </p>
 
-## Languages
+## 🧬 Code DNA
 
 <p align="center">
 
@@ -41,7 +51,7 @@
 
 </p>
 
-## Contribution Calendar
+## 🌱 Activity Garden
 
 <p align="center">
 
@@ -49,7 +59,7 @@
 
 </p>
 
-## Contribution Streak
+## 🔥 Streak
 
 <p align="center">
 
