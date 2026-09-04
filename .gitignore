@@ -2,8 +2,8 @@ __pycache__/
 *.pyc
 .env
 
-cache/
-logs/
+/cache/
+/logs/
 
 .vscode/
 
