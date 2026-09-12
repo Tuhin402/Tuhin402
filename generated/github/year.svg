@@ -435,6 +435,7 @@
 <rect x="880" y="132" width="12" height="12" fill="#21262D" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
 <rect x="880" y="148" width="12" height="12" fill="#21262D" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
 <rect x="880" y="164" width="12" height="12" fill="#21262D" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
-<rect x="880" y="180" width="12" height="12" fill="#21262D" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
+<rect x="880" y="180" width="12" height="12" fill="#0E4429" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
+<rect x="880" y="196" width="12" height="12" fill="#21262D" rx="2" ry="2" stroke="#30363D" stroke-width="0.5" class="pg-grid-cell" opacity="1" />
 <text x="48" y="284" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-footer" opacity="1">Generated automatically using Profile Generator</text>
 </svg>

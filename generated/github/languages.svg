@@ -67,21 +67,21 @@
 <text x="48" y="56" fill="#FFFFFF" font-family="JetBrains Mono" font-size="16" font-weight="700" letter-spacing="1.5" xml:space="preserve" class="pg-heading-title" opacity="1">PROGRAMMING LANGUAGES</text>
 <text x="48" y="78" fill="#8B949E" font-family="JetBrains Mono" font-size="12" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-heading-subtitle" opacity="1">Repository language distribution</text>
 <text x="48" y="108" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">Jupyter Notebook</text>
-<text x="818" y="108" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">69.7%</text>
+<text x="818" y="108" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">69.6%</text>
 <rect x="48" y="120" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="1" />
-<rect x="48" y="120" width="565.639" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
-<text x="48" y="160" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">TypeScript</text>
-<text x="818" y="160" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">10.3%</text>
+<rect x="48" y="120" width="565.233" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
+<text x="48" y="160" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">PHP</text>
+<text x="818" y="160" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">10.4%</text>
 <rect x="48" y="172" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="1" />
-<rect x="48" y="172" width="84.042" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
-<text x="48" y="212" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">PHP</text>
+<rect x="48" y="172" width="84.204" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
+<text x="48" y="212" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">TypeScript</text>
 <text x="818" y="212" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">10.3%</text>
 <rect x="48" y="224" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="1" />
-<rect x="48" y="224" width="83.717" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
+<rect x="48" y="224" width="84.042" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
 <text x="48" y="264" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">CSS</text>
-<text x="818" y="264" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">3.7%</text>
+<text x="818" y="264" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">3.6%</text>
 <rect x="48" y="276" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="1" />
-<rect x="48" y="276" width="29.719" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
+<rect x="48" y="276" width="29.638" height="14" fill="#58A6FF" rx="6" ry="6" class="pg-language-progress" />
 <text x="48" y="316" fill="#FFFFFF" font-family="JetBrains Mono" font-size="14" font-weight="600" letter-spacing="0" xml:space="preserve" class="pg-language-label" opacity="1">Python</text>
 <text x="818" y="316" fill="#8B949E" font-family="JetBrains Mono" font-size="13" font-weight="400" letter-spacing="0" xml:space="preserve" class="pg-language-percentage" opacity="1">2.9%</text>
 <rect x="48" y="328" width="812" height="14" fill="#30363D" rx="6" ry="6" class="pg-language-track" opacity="1" />
